@@ -18,8 +18,8 @@ const AboutPage = ({ data }, location) => {
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Clean, minimal, and deeply customisable. London is a theme made for
-            people who appreciate simple lines.
+            Clean minimal ideas. A blog for developers who appreciate simple
+            lines.
           </h2>
           <figure className="kg-card kg-image-card kg-width-full">
             <Img
@@ -62,9 +62,7 @@ const indexQuery = graphql`
         title
       }
     }
-    benchAccounting: file(
-      relativePath: { eq: "bench-accounting-49909-unsplash.jpg" }
-    ) {
+    benchAccounting: file(relativePath: { eq: "blog.png" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
