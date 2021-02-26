@@ -21,33 +21,21 @@ const AboutPage = ({ data }, location) => {
             Clean minimal ideas. A blog for developers who appreciate simple
             lines.
           </h2>
-          <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.benchAccounting.childImageSharp.fluid}
-              className="kg-image"
-            />
-            <figcaption>Saltie for life</figcaption>
-          </figure>
-          <h3 id="dynamic-styles">Dynamic styles</h3>
+          <Img
+            fluid={data.benchAccounting.childImageSharp.fluid}
+            className="kg-limage"
+          />
           <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
-          </p>
-          <p>
-            Both post and page templates are light and minimal, with all the
-            focus on the content while the design of the theme gets out of the
-            way. Beneath the hood, London enjoys the full power of the{" "}
-            <a href="https://docs.ghost.org/api/handlebars-themes/">
-              Ghost Handlebars Theme API
+            I am Jorge Casal, a full stack JavaScript developer based in
+            Stockholm, whose main focus is to innovate solutions. Check out my{" "}
+            <a target="_blank" href="https://jorgecasal.github.io/">
+              Portfolio
             </a>{" "}
-            to provide limitless customisation options and dynamic styles.
-          </p>
-          <p>
-            Don't forget to check out the{" "}
-            <a href="https://docs.ghost.org/integrations/">
-              Ghost Integrations Directory
+            or take a look at my{" "}
+            <a target="_blank" href="https://github.com/jorgecasal">
+              Repo
             </a>{" "}
-            for more ways to integrate Ghost with your favourite services.
+            and lets get to know each other a little better. Enjoy the hacking.
           </p>
         </div>
       </article>
