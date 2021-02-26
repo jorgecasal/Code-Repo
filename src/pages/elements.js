@@ -533,25 +533,21 @@ const indexQuery = graphql`
         title
       }
     }
-    smallPic: file(
-      relativePath: { eq: "fabio-comparelli-696506-unsplash.jpg" }
-    ) {
+    smallPic: file(relativePath: { eq: "blog.png" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    medPic: file(relativePath: { eq: "sophia-valkova-30139-unsplash.jpg" }) {
+    medPic: file(relativePath: { eq: "blog.png" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    largePic: file(
-      relativePath: { eq: "vladimir-malyutin-98174-unsplash.jpg" }
-    ) {
+    largePic: file(relativePath: { eq: "blog.png" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
