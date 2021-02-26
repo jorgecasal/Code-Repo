@@ -26,7 +26,7 @@ const AboutPage = ({ data }, location) => {
               fluid={data.benchAccounting.childImageSharp.fluid}
               className="kg-image"
             />
-            <figcaption>Large imagery is at the heart of this theme</figcaption>
+            <figcaption>Saltie for life</figcaption>
           </figure>
           <h3 id="dynamic-styles">Dynamic styles</h3>
           <p>

@@ -27,7 +27,7 @@ class BlogPostTemplate extends React.Component {
             <p class="post-content-excerpt">{post.frontmatter.description}</p>
           )}
 
-          {post.frontmatter.thumbnail && (
+          {/* {post.frontmatter.thumbnail && (
             <div className="post-content-image">
               <Img
                 className="kg-image"
@@ -35,7 +35,7 @@ class BlogPostTemplate extends React.Component {
                 alt={post.frontmatter.title}
               />
             </div>
-          )}
+          )} */}
 
           <div
             className="post-content-body"
