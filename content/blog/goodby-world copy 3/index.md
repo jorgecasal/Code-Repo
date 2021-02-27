@@ -1,5 +1,5 @@
 ---
-title: Gooodby World
+title: function
 date: "2015-05-01T22:12:03.284Z"
 description: yeah man
 thumbnail: ./egg3.jpg

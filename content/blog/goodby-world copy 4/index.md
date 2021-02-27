@@ -1,5 +1,5 @@
 ---
-title: Gooodby World
+title: For loop
 date: "2015-05-01T22:12:03.284Z"
 thumbnail: ./egg4.jpg
 ---

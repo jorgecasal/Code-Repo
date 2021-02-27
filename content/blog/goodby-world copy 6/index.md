@@ -1,7 +1,8 @@
 ---
-title: Gooodby World
+title: Class
 date: "2015-05-01T22:12:03.284Z"
 thumbnail: ./egg6.jpg
+description: What is a class?
 ---
 
 This is my first post on my new fake blog! How exciting!
