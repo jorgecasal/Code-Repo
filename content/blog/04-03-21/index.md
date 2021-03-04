@@ -2,6 +2,7 @@
 title: Express server
 date: "2021-03-04T22:12:03.284Z"
 thumbnail: ./egg1.jpg
+description: components and how to use it
 ---
 
 This is my first post on my new fake blog! How exciting!
@@ -19,8 +20,6 @@ Oh, and here's a great quote from this Wikipedia on
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
 
-![Chinese Salty Egg](./salty_egg.jpg)
-
 Wow! I love blogging so much already.
 
 Did you know that "despite its name, salted duck eggs can also be made from
@@ -32,7 +31,7 @@ Yeah, I didn't either.
 
 ## The express server
 
-Express is a web application framework for Node.js that allows you to spin up robust APIs and web servers in a much easier and cleaner way. It is a lightweight package that does not obscure the core Node.js features. In this post we’ll go over how to setup a very basic web server.
+Express is an unopinionated framework for Node.js that helps you to serve your applications in a much easier and cleaner way.
 
 Installation
 Express is very simple to install. Simply install it via npm as you would with any other package.
@@ -139,6 +138,4 @@ app.use("/gators", express.static("public"))
 app.use("/gators", serveIndex("public"))
 ```
 
-Now, restart your server and navigate to localhost:3000/gators. You should see a listing of all your files!
-
-There we have it, a basic Express server using Node.js. To learn more about Express, they have multiple guides and documentation on their website: expressjs.com
+So there you have it, the Express server in node. For more documentation visit: [expressjs](https://expressjs.com/)
