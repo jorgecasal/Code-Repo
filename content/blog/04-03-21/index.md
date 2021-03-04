@@ -5,82 +5,55 @@ thumbnail: ./egg1.jpg
 description: components and how to use it
 ---
 
-This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
-
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
-
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
-
-Wow! I love blogging so much already.
-
-Did you know that "despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich."?
-([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
-
-Yeah, I didn't either.
-
 ## The express server
 
-Express is an unopinionated framework for Node.js that helps you to serve your applications in a much easier and cleaner way.
+Expressjs is an unopinionated framework for Node.js that helps you to serve your applications in a much easier and cleaner way.
 
-Installation
-Express is very simple to install. Simply install it via npm as you would with any other package.
+To install it simply run:
 
 ```js
 $ npm install express --save
 ```
 
-Usage
-Now that Express is installed, here’s what the most basic server looks like:
+After installing take this template:
 
 ```js
 const express = require("express")
 const app = express()
 
 app.get("/", (req, res) => {
-  res.send("An alligator approaches!")
+  res.send("Robots are alive!")
 })
 
-app.listen(3000, () => console.log("Gator app listening on port 3000!"))
+app.listen(3000, () => console.log("Server up and running on port 3000!"))
 ```
 
-Now, run this script, and navigate to localhost:3000 in your browser. You should see the message An alligator approaches! in your browser window!
+Run this file, and see what surprise is waiting for you on localhost:3000
 
-Let’s go over each section of this code to explain how Express works.
+Let’s take it step by step.
 
-Explanation
-const express = require('express');
-const app = express();
+```js
+const express = require("express")
+const app = express()
+```
 
-The first line here is grabbing the main Express module from the package you installed. This module is a function, which we then run on the second line to create our app variable. You can create multiple apps this way, each with their own requests and responses.
+The first line requires the Express module from the package you installed. Then we assign this function on the second line to create our app variable.
 
 ```js
 app.get("/", (req, res) => {
-  res.send("An alligator approaches!")
+  res.send("Robots are alive!")
 })
 ```
 
-This bite of code is where we tell our Express server how to handle a GET request to our server. Express includes similar functions for POST, PUT, etc. using app.post(...), app.put(...), etc.
+This part is where the Express server handles GET request to our server. Express can also be used with POST, PUT, DELETE. using app.post(...), app.put(...), app.delete(...).
 
-These functions take two main parameters. The first is the URL for this function to act upon. In this case, we are targeting '/', which is the root of our website: in this case, localhost:3000.
-
-The second parameter is a function with two arguments: req, and res. req represents the request that was sent to the server; We can use this object to read data about what the client is requesting to do. res represents the response that we will send back to the client. Here, we are calling a function on res to send back a response: 'An alligator approaches!'.
+These functions take two arguments. A URL, in our case, we are targeting '/', which is the root of our website: so, localhost:3000. And a function with two arguments: req, and res. req is the request sent to the server. res is representing the response that we will send back to the client. Here, we are calling a function on res to send back a response: 'Robots are alive!'.
 
 ```js
-app.listen(3000, () => console.log("Gator app listening on port 3000!"))
+app.listen(3000, () => console.log("Server up and running on port 3000!"))
 ```
 
-Finally, once we’ve set up our requests, we must start our server! We are passing 3000 into the listen function, which tells the app which port to listen on. The function passed-in as the second parameter is optional, and runs when the server starts up. This just gives us some feedback in the console to know that our application is running.
+Then with out requests set up, we must start our server! We are passing 3000 into the listen function, which tells the app which port to listen on. The function passed-in as the second parameter is optional, and runs when the server starts up. This just gives us some feedback in the console to know that our application is running.
 
 And there we have it, a basic web server! However, we definitely want to send more than just a single line of text back to the client. Let’s briefly cover what middleware is and how to set this server up as a static file server!
 
