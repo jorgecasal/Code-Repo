@@ -1,5 +1,5 @@
 ---
-title: For loop
+title: On loops
 date: "2015-05-01T22:12:03.284Z"
 thumbnail: ./egg4.jpg
 ---

@@ -53,6 +53,8 @@ These functions take two arguments. A URL, in our case, we are targeting '/', wh
 app.listen(3000, () => console.log("Server up and running on port 3000!"))
 ```
 
+====================================================================
+
 Then with out requests set up, we must start our server! We are passing 3000 into the listen function, which tells the app which port to listen on. The function passed-in as the second parameter is optional, and runs when the server starts up. This just gives us some feedback in the console to know that our application is running.
 
 And there we have it, a basic web server! However, we definitely want to send more than just a single line of text back to the client. Let’s briefly cover what middleware is and how to set this server up as a static file server!
