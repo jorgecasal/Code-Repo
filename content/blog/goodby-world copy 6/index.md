@@ -5,47 +5,36 @@ thumbnail: ./egg6.jpg
 description: What is a class?
 ---
 
-This is my first post on my new fake blog! How exciting!
+High-order functions: The basics
+You may wonder what those three things have to do with high-order functions. The first one about variables not much. However, the second and third, passing functions as arguments and returning functions, a lot. Here is the thing, high-order functions are functions that take another function as an argument, and/or returns another function.
 
-I'm sure I'll write a lot more interesting things in the future.
+In all examples, where you were passing a function as an argument, or returning a function, you were actually working with high-order functions. You probably expected something more complex than this. Especially due to how many JavaScript developers talk about high-order functions. However, it is really that simple.
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+// High-order function no.1:
+// Function that takes a function as a argument
+function myHighOrderFuncOne(myFunc) {
+// some code
+}
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+// High-order function no.2:
+// Function that returns a function
+function myHighOrderFuncTwo() {
+// some code
 
-![Chinese Salty Egg](./salty_egg.jpg)
+// Return a function
+return function() {
+// some code
+}
+}
 
-Wow! I love blogging so much already.
+// High-order function no.3:
+// Function that takes a function as a argument
+// and also returns a function
+function myHighOrderFuncThree(myFunc) {
+// some code
 
-Did you know that "despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich."?
-([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
-
-Yeah, I didn't either.
-
-## Default NodeJS server
-
-```js
-const http = require("http")
-
-const hostname = "127.0.0.1"
-const port = 3000
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200
-  res.setHeader("Content-Type", "text/plain")
-  res.end("Hello World\n")
-})
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`)
-})
-```
+// Return a function
+return function() {
+// some code
+}
+}
