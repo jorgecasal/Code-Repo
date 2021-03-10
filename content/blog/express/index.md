@@ -1,7 +1,7 @@
 ---
 title: Express server
 date: "2021-03-04T22:12:03.284Z"
-thumbnail: ./egg1.jpg
+thumbnail: ./express.jpg
 description: components and how to use it
 ---
 
