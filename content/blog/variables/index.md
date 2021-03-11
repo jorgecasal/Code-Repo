@@ -1,6 +1,6 @@
 ---
 title: Variables
-date: "2015-05-01T22:12:03.284Z"
+date: "2021-01-10"
 thumbnail: ./egg4.jpg
 description: What is a variable?
 ---
