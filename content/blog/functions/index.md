@@ -1,9 +1,7 @@
 ---
 title: functions
 date: "2015-05-01T22:12:03.284Z"
-description: yeah man
 thumbnail: ./egg3.jpg
-description: What is a function?
 ---
 
 We have already become familiar with defining arrow functions. The complete process, without cutting corners, to defining an arrow function is as follows:
