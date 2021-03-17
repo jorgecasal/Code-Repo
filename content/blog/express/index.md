@@ -2,7 +2,7 @@
 title: Express server
 date: "2021-03-04T22:12:03.284Z"
 thumbnail: ./express.jpg
-description: components and how to use it
+description: its components and how to use it
 ---
 
 ## The express server
@@ -53,22 +53,19 @@ These functions take two arguments. A URL, in our case, we are targeting '/', wh
 app.listen(3000, () => console.log("Server up and running on port 3000!"))
 ```
 
-====================================================================
+We tell the app which port to listen on, in this case we said 3000. The function passed-in as the second parameter is optional, and runs when the server starts. This could be a simple message to let us know that the app is running.
 
-Then with out requests set up, we must start our server! We are passing 3000 into the listen function, which tells the app which port to listen on. The function passed-in as the second parameter is optional, and runs when the server starts up. This just gives us some feedback in the console to know that our application is running.
+And there we have it, our brand new server!
 
-And there we have it, a basic web server! However, we definitely want to send more than just a single line of text back to the client. Let’s briefly cover what middleware is and how to set this server up as a static file server!
+##Middleware
+We can write functions that have access to all http requests, these functions can for example:
 
-Middleware
-With Express, we can write and use middleware functions, which have access to ALL http requests coming to the server. These functions can:
+Execute code.
+Make changes to the request and/or response.
+End the request and/or response.
+Call the next middleware.
 
-Execute any code.
-Make changes to the request and the response objects.
-End the request-response cycle.
-Call the next middleware function in the stack.
-We can write our own middleware functions, or use third-party middleware by importing them the same way we would with any other package. Let’s start by writing our own middleware, then we’ll try using some existing middleware to serve static files.
-
-To define a middleware function, we call app.use() and pass it a function. Here’s a basic middleware function to print the current time in the console during every request:
+To define a middleware function, we call app.use() and pass it a function. How about console logging the time for example:
 
 ```js
 app.use((req, res, next) => {
@@ -77,7 +74,7 @@ app.use((req, res, next) => {
 })
 ```
 
-The next() call tells the middleware to go to the next middleware function, if there is one. This is important to include at the end of our function - otherwise, the request will get stuck on this middleware.
+The next() only makes our middleware to continue to the next function.
 
 We can optionally pass a path to the middleware, which will only handle requests to that route. For example:
 
