@@ -79,13 +79,13 @@ The next() only makes our middleware to continue to the next function.
 We can optionally pass a path to the middleware, which will only handle requests to that route. For example:
 
 ```js
-app.use("/nest", (req, res, next) => {
+app.use("/rest", (req, res, next) => {
   console.log("Request type: ", req.method)
   next()
 })
 ```
 
-By passing '/nest' as the first argument to app.use(), this function will only run for requests sent to localhost:3000/nest.
+By passing '/rest' as the first argument to app.use(), this function will only run for requests sent to localhost:3000/nest.
 
 Now, let’s try using existing middleware to serve static files. Express comes with a built-in middleware function: express.static. We will also use a third-party middleware function, serve-index, to display an index listing of our files.
 
