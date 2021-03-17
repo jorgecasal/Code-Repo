@@ -85,7 +85,7 @@ app.use("/rest", (req, res, next) => {
 })
 ```
 
-By passing '/rest' as the first argument to app.use(), this function will only run for requests sent to localhost:3000/nest.
+By passing '/rest' as the first argument to app.use(), this function will only run for requests sent to localhost:3000/rest.
 
 Now, let’s try using existing middleware to serve static files. Express comes with a built-in middleware function: express.static. We will also use a third-party middleware function, serve-index, to display an index listing of our files.
 
