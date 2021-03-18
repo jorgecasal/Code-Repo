@@ -106,7 +106,6 @@ const serveIndex = require("serve-index")
 Now, let’s include the express.static and serveIndex middleware and tell them the path to access from and the name of our folder:
 
 ```js
-<<<<<<< HEAD
 app.use("/something", express.static("public"))
 app.use("/something", serveIndex("public"))
 ```
