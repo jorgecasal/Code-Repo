@@ -79,17 +79,17 @@ The next() only makes our middleware to continue to the next function.
 We can optionally pass a path to the middleware, which will only handle requests to that route. For example:
 
 ```js
-app.use("/rest", (req, res, next) => {
+app.use("/something", (req, res, next) => {
   console.log("Request type: ", req.method)
   next()
 })
 ```
 
-By passing '/rest' as the first argument to app.use(), this function will only run for requests sent to localhost:3000/rest.
+By passing '/something' as the first argument to app.use(), this function will only run for requests sent to localhost:3000/something.
 
 Now, let’s try using existing middleware to serve static files. Express comes with a built-in middleware function: express.static. We will also use a third-party middleware function, serve-index, to display an index listing of our files.
 
-First, inside the same folder where the express server is located, create a folder called public and put some files in there (any files will do, perhaps some images of gators).
+First, inside the same folder where the express server is located, create a folder called public and put some HTML in there for example
 
 Then, install the package serve-index:
 
@@ -97,7 +97,7 @@ Then, install the package serve-index:
 $ npm install serve-index --save
 ```
 
-Import the serve-index package at the top of our server file:
+Import the serve-index package at the top:
 
 ```js
 const serveIndex = require("serve-index")
@@ -106,8 +106,8 @@ const serveIndex = require("serve-index")
 Now, let’s include the express.static and serveIndex middlewares and tell them the path to access from and the name of our folder:
 
 ```js
-app.use("/gators", express.static("public"))
-app.use("/gators", serveIndex("public"))
+app.use("/something", express.static("public"))
+app.use("/something", serveIndex("public"))
 ```
 
-So there you have it, the Express server in node. For more documentation visit: [expressjs](https://expressjs.com/)
+and that is the express server. Need further info? checkout [expressjs](https://expressjs.com/).
