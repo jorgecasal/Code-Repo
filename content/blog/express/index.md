@@ -106,8 +106,8 @@ const serveIndex = require("serve-index")
 Now, let’s include the express.static and serveIndex middlewares and tell them the path to access from and the name of our folder:
 
 ```js
-app.use("/gators", express.static("public"))
-app.use("/gators", serveIndex("public"))
+app.use("/changethis", express.static("public"))
+app.use("/changethis", serveIndex("public"))
 ```
 
 So there you have it, the Express server in node. For more documentation visit: [expressjs](https://expressjs.com/)
