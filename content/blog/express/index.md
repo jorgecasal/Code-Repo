@@ -103,11 +103,12 @@ Import the serve-index package at the top:
 const serveIndex = require("serve-index")
 ```
 
-Now, let’s include the express.static and serveIndex middlewares and tell them the path to access from and the name of our folder:
+Now, let’s include the express.static and serveIndex middleware and tell them the path to access from and the name of our folder:
 
 ```js
+<<<<<<< HEAD
 app.use("/something", express.static("public"))
 app.use("/something", serveIndex("public"))
 ```
 
-and that is the express server. Need further info? checkout [expressjs](https://expressjs.com/).
+and that is the express server. Need further info? check out [expressjs](https://expressjs.com/).
