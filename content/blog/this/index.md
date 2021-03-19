@@ -5,8 +5,6 @@ thumbnail: ./egg1.jpg
 description: What is This?
 ---
 
-Due to the fact that during this course we are using a version of React containing React Hooks we have no need for defining objects with methods. The contents of this chapter are not relevant to the course but are certainly in many ways good to know. In particular when using older versions of React one must understand the topics of this chapter.
-
 Arrow functions and functions defined using the function keyword vary substantially when it comes to how they behave with respect to the keyword this, which refers to the object itself.
 
 We can assign methods to an object by defining properties that are functions:
