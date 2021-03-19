@@ -32,3 +32,5 @@ const helloSayer = name => console.log("hello " + name)
 //call the function
 helloSayer(name)
 ```
+
+script in the
