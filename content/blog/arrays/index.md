@@ -24,19 +24,26 @@ Notable in this example is the fact that the contents of the array can be modifi
 
 One way of iterating through the items of the array is using forEach as seen in the example. forEach receives a function defined using the arrow syntax as a parameter.
 
-value => {
-console.log(value)
+```js
+i => {
+  console.log(i)
 }
-forEach calls the function for each of the items in the array, always passing the individual item as a parameter. The function as the parameter of forEach may also receive other parameters.
+```
 
-In the previous example, a new item was added to the array using the method push. When using React, techniques from functional programming are often used. One characteristic of the functional programming paradigm is the use of immutable data structures. In React code, it is preferable to use the method concat, which does not add the item to the array, but creates a new array in which the content of the old array and the new item are both included.
+###forEach
+calls the function for each of the items in the array, always passing the individual item as a parameter. The function as the parameter of forEach may also receive other parameters.
 
+In the previous example, a new item was added to the array using the method push.
+
+```js
 const t = [1, -1, 3]
 
 const t2 = t.concat(5)
 
 console.log(t) // [1, -1, 3] is printed
 console.log(t2) // [1, -1, 3, 5] is printed
+```
+
 The method call t.concat(5) does not add a new item to the old array but returns a new array which, besides containing the items of the old array, also contains the new item.
 
 There are plenty of useful methods defined for arrays. Let's look at a short example of using the map method.
