@@ -33,20 +33,22 @@ i => {
 ###forEach
 calls the function for each of the items in the array, always passing the individual item as a parameter. The function as the parameter of forEach may also receive other parameters.
 
-In the previous example, a new item was added to the array using the method push.
+In the previous example, a new item was added to the array using the method push, so now lets checkout the concat method.
 
 ```js
-const t = [1, -1, 3]
+const x = [1, -1, 3]
 
-const t2 = t.concat(5)
+const x2 = x.concat(5)
 
-console.log(t) // [1, -1, 3] is printed
-console.log(t2) // [1, -1, 3, 5] is printed
+console.log(x) // [1, -1, 3] is printed to the console
+console.log(x2) // [1, -1, 3, 5] is printed to the console
 ```
 
-The method call t.concat(5) does not add a new item to the old array but returns a new array which, besides containing the items of the old array, also contains the new item.
+The method call x.concat(5) does not add a new item to the old array but returns a new array which, besides containing the items of the old array, also contains the new item.
 
 There are plenty of useful methods defined for arrays. Let's look at a short example of using the map method.
+
+==================================================================================
 
 const t = [1, 2, 3]
 
