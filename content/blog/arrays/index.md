@@ -5,18 +5,21 @@ thumbnail: ./egg2.jpg
 description: What is an array
 ---
 
-An array and a couple of examples of its use:
+Here is an array and a couple of examples of its use:
 
-const t = [1, -1, 3]
+```js
+const x = [1, -1, 3]
 
-t.push(5)
+x.push(5)
 
-console.log(t.length) // 4 is printed
-console.log(t[1]) // -1 is printed
+console.log(x.length) // 4 is printed to the console
+console.log(x[1]) // -1 is printed to the console
 
-t.forEach(value => {
-console.log(value) // numbers 1, -1, 3, 5 are printed, each to own line
-})  
+x.forEach(i => {
+  console.log(i) // numbers 1, -1, 3, 5 are printed to the console, one per line
+})
+```
+
 Notable in this example is the fact that the contents of the array can be modified even though it is defined as a const. Because the array is an object the variable always points to the same object. However, the content of the array changes as new items are added to it.
 
 One way of iterating through the items of the array is using forEach as seen in the example. forEach receives a function defined using the arrow syntax as a parameter.
