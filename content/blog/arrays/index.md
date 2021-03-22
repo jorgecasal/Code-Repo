@@ -48,12 +48,14 @@ The method call x.concat(5) does not add a new item to the old array but returns
 
 There are plenty of useful methods defined for arrays. Let's look at a short example of using the map method.
 
-==================================================================================
+```js
+const x = [1, 2, 3]
 
-const t = [1, 2, 3]
+const y1 = x.map(i => i \* 2)
 
-const m1 = t.map(value => value \* 2)
-console.log(m1) // [2, 4, 6] is printed
+console.log(y1) // [2, 4, 6] is printed to the console
+```
+
 Based on the old array, map creates a new array, for which the function given as a parameter is used to create the items. In the case of this example the original value is multiplied by two.
 
 Map can also transform the array into something completely different:
