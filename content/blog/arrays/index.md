@@ -66,14 +66,18 @@ console.log(y2)
 // [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ] is printed to the console
 ```
 
-Here an array filled with integer values is transformed into an array containing strings of HTML using the map method. In part 2 of this course, we will see that map is used quite frequently in React.
+Here an array filled with integer values is transformed into an array containing strings of HTML using the map method.
 
 Individual items of an array are easy to assign to variables with the help of the destructuring assignment.
 
-const t = [1, 2, 3, 4, 5]
+```js
+const x = [1, 2, 3, 4, 5]
 
-const [first, second, ...rest] = t
+const [first, second, ...rest] = x
 
-console.log(first, second) // 1, 2 is printed
-console.log(rest) // [3, 4 ,5] is printed
+console.log(first, second) // 1, 2 is printed to the console
+
+console.log(rest) // [3, 4 ,5] is printed to the console
+```
+
 Thanks to the assignment, the variables first and second will receive the first two integers of the array as their values. The remaining integers are "collected" into an array of their own which is then assigned to the variable rest.
