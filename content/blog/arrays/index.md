@@ -51,7 +51,7 @@ There are plenty of useful methods defined for arrays. Let's look at a short exa
 ```js
 const x = [1, 2, 3]
 
-const y1 = x.map(i => i \* 2)
+const y1 = x.map(i => i * 2)
 
 console.log(y1) // [2, 4, 6] is printed to the console
 ```
@@ -60,9 +60,12 @@ Based on the old array, map creates a new array, for which the function given as
 
 Map can also transform the array into something completely different:
 
-const m2 = t.map(value => '<li>' + value + '</li>')
-console.log(m2)  
-// [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ] is printed
+```js
+const y2 = x.map(i => "<li>" + i + "</li>")
+console.log(y2)
+// [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ] is printed to the console
+```
+
 Here an array filled with integer values is transformed into an array containing strings of HTML using the map method. In part 2 of this course, we will see that map is used quite frequently in React.
 
 Individual items of an array are easy to assign to variables with the help of the destructuring assignment.
