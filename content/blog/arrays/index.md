@@ -22,6 +22,7 @@ x.forEach(i => {
 
 Notable in this example is the fact that the contents of the array can be modified even though it is defined as a const. Because the array is an object the variable always points to the same object. However, the content of the array changes as new items are added to it.
 
+###forEach
 One way of iterating through the items of the array is using forEach as seen in the example. forEach receives a function defined using the arrow syntax as a parameter.
 
 ```js
@@ -30,7 +31,6 @@ i => {
 }
 ```
 
-###forEach
 calls the function for each of the items in the array, always passing the individual item as a parameter. The function as the parameter of forEach may also receive other parameters.
 
 In the previous example, a new item was added to the array using the method push, so now lets checkout the concat method.
