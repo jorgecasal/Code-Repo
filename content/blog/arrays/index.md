@@ -46,6 +46,7 @@ console.log(x2) // [1, -1, 3, 5] is printed to the console
 
 The method call x.concat(5) does not add a new item to the old array but returns a new array which, besides containing the items of the old array, also contains the new item.
 
+###map
 There are plenty of useful methods defined for arrays. Let's look at a short example of using the map method.
 
 ```js
@@ -68,6 +69,7 @@ console.log(y2)
 
 Here an array filled with integer values is transformed into an array containing strings of HTML using the map method.
 
+###destructuring
 Individual items of an array are easy to assign to variables with the help of the destructuring assignment.
 
 ```js
