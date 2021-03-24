@@ -26,8 +26,8 @@ Notable in this example is the fact that the contents of the array can be modifi
 One way of iterating through the items of the array is using forEach as seen in the example. forEach receives a function defined using the arrow syntax as a parameter.
 
 ```js
-i => {
-  console.log(i)
+item => {
+  console.log(item)
 }
 ```
 

@@ -9,13 +9,19 @@ In JavaScript there are a few ways to go about defining variables:
 
 ```js
 const x = 1
+
 let y = 5
 
-console.log(x, y) // 1, 5 are printed
+console.log(x, y) // 1, 5 are printed to the console
+
 y += 10
-console.log(x, y) // 1, 15 are printed
+
+console.log(x, y) // 1, 15 are printed to the console
+
 y = "aString"
-console.log(x, y) // 1, aString are printed
+
+console.log(x, y) // 1, aString are printed to the console
+
 x = 4 // causes an error
 ```
 
