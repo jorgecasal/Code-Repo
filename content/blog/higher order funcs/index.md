@@ -1,6 +1,6 @@
 ---
 title: higher order funcs
-date: "2021-10-10"
+date: "2011-10-10"
 thumbnail: ./pexels-jess-vide-4608732.jpg
 description: What are they and how to use them?
 ---
