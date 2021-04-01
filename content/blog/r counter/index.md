@@ -9,11 +9,11 @@ description: useState counter?
 import React, { useState } from "react"
 import ReactDOM from "react-dom"
 
-function Toggle() {
+function Counter() {
   const [count, setCount] = useState(0)
 
   return <button onClick={() => setCount(count + 1)}>{count}</button>
 }
 
-ReactDOM.render(<Toggle />, document.getElementById("root"))
+ReactDOM.render(<Counter />, document.getElementById("root"))
 ```
