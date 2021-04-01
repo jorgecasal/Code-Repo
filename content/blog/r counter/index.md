@@ -11,8 +11,8 @@ import ReactDOM from "react-dom"
 
 function Counter() {
   const [count, setCount] = useState(0)
-
-  return <button onClick={() => setCount(count + 1)}>{count}</button>
+  const leFunc = () => setCount(count + 1)
+  return <button onClick={leFunc}>{count}</button>
 }
 
 ReactDOM.render(<Counter />, document.getElementById("root"))
