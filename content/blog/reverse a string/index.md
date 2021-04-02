@@ -6,14 +6,16 @@ description: .split() .reverse() .join()
 ---
 
 ```js
-function FirstReverse(str) {
+let str = "Hello"
+
+function stringReverse(str) {
   console.log(str.split(""))
   console.log(str.split("").reverse())
   console.log(
     str
-      .split("")
-      .reverse()
-      .join("")
+      .split("") //[ 'H', 'e', 'l', 'l', 'o' ]
+      .reverse() //[ 'o', 'l', 'l', 'e', 'H' ]
+      .join("") //olleH
   )
 
   return str
@@ -22,6 +24,5 @@ function FirstReverse(str) {
     .join("")
 }
 
-// keep this function call here
-console.log(FirstReverse(readline()))
+stringReverse(str)
 ```
