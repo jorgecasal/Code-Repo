@@ -39,3 +39,17 @@ Have the function LongestWord(sen) take the sen parameter being passed and retur
 > Output: time
 > Input: "I love dogs"
 > Output: love
+
+```js
+function LongestWord(sen) {
+  let senSplit = sen.replace(/[^A-Za-z0-9\ ]/g, "").split(" ")
+  let longestWord = 0
+  for (let i = 0; i < senSplit.length; i += 1) {
+    if (senSplit[i].length > longestWord) {
+      longestWord = senSplit[i].length
+      sen = senSplit[i]
+    }
+  }
+  return sen
+}
+```
