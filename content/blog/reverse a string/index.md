@@ -70,3 +70,39 @@ function solution(str, ending) {
   return str.endsWith(ending) ? true : false
 }
 ```
+
+---
+
+function capital(word) {
+console.log('help func arg =', word)
+word.split("")
+for (i = 0; i < word.length; i += 1){
+if (i % 2 == 0) {
+word[i] = word[i].toUpperCase()
+}
+}
+return word.join("");
+console.log('after help func =', word)
+}
+function toWeirdCase(string){
+let words = string.split(" ")
+const regex = / /g;
+for (i = 0; i < words.length; i += 1){
+console.log(i)
+if (regex.test(words[i]) === false){
+capital(words);
+}
+return words.join(" ")
+}
+
+return words
+}
+
+// const regex = / /g;
+// for (i = 0; i < string.length; i += 1){
+// if (regex.test(string[i]) === false){
+// if (i % 2 == 0) {
+// string[i] = 'Å'
+// }
+// }
+// }
