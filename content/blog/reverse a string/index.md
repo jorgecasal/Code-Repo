@@ -84,6 +84,19 @@ word[i] = word[i].toUpperCase()
 return word.join("");
 console.log('after help func =', word)
 }
+
+function capital(word) {
+console.log('func arg =', word)
+for (i = 0; i < word.length; i += 1){
+
+console.log('func arg element =', word[i])
+word[i] = word[i].toUpperCase();
+  
+ }
+return word
+
+}
+
 function toWeirdCase(string){
 let words = string.split(" ")
 const regex = / /g;
@@ -96,6 +109,23 @@ return words.join(" ")
 }
 
 return words
+}
+
+function toWeirdCase(string){
+let arr = string.split(" ");
+let i = 0;
+let newArr = [];
+for (const letter of arr) {
+for (x = 0; x < letter.length; x += 1){
+if (x % 2 == 0) {
+newArr.push(letter[x].toUpperCase())
+} else {
+newArr.push(letter[x])
+}
+}
+i++
+}
+return newArr.join("");
 }
 
 // const regex = / /g;
