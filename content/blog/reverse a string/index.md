@@ -71,21 +71,34 @@ function solution(str, ending) {
 }
 ```
 
+### WeIrD StRiNg CaSe
+
+Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and returns the same string with all even indexed characters in each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith index is even, therefore that character should be upper cased.
+
+The passed in string will only consist of alphabetical characters and spaces(' '). Spaces will only be present if there are multiple words. Words will be separated by a single space(' ').
+
+#### Examples
+
+> Input: "String"
+> Output: "StRiNg"
+> Input: "Weird string case"
+> Output: "WeIrD StRiNg CaSe"
+
+```js
 function toWeirdCase(string) {
-str = string.split(" ");
-for(let i = 0; i < str.length; i++) {
-str[i] = str[i].split("");
-for (let x = 0; x < str[i].length; x++) {
-if (x % 2 === 0) {
-str[i][x] = str[i][x].toUpperCase();
+  str = string.split(" ")
+  for (let i = 0; i < str.length; i++) {
+    str[i] = str[i].split("")
+    for (let x = 0; x < str[i].length; x++) {
+      if (x % 2 === 0) {
+        str[i][x] = str[i][x].toUpperCase()
+      } else {
+        str[i][x] = str[i][x].toLowerCase()
+      }
+    }
+    str[i] = str[i].join("")
+  }
+  string = str.join(" ")
+  return string
 }
-else {
-str[i][x] = str[i][x].toLowerCase();
-}
-}
-str[i] = str[i].join("");
-  
- }
-string = str.join(" ");
-return string;
-}
+```
