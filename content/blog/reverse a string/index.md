@@ -71,68 +71,21 @@ function solution(str, ending) {
 }
 ```
 
----
-
-function capital(word) {
-console.log('help func arg =', word)
-word.split("")
-for (i = 0; i < word.length; i += 1){
-if (i % 2 == 0) {
-word[i] = word[i].toUpperCase()
+function toWeirdCase(string) {
+str = string.split(" ");
+for(let i = 0; i < str.length; i++) {
+str[i] = str[i].split("");
+for (let x = 0; x < str[i].length; x++) {
+if (x % 2 === 0) {
+str[i][x] = str[i][x].toUpperCase();
+}
+else {
+str[i][x] = str[i][x].toLowerCase();
 }
 }
-return word.join("");
-console.log('after help func =', word)
-}
-
-function capital(word) {
-console.log('func arg =', word)
-for (i = 0; i < word.length; i += 1){
-
-console.log('func arg element =', word[i])
-word[i] = word[i].toUpperCase();
+str[i] = str[i].join("");
   
  }
-return word
-
+string = str.join(" ");
+return string;
 }
-
-function toWeirdCase(string){
-let words = string.split(" ")
-const regex = / /g;
-for (i = 0; i < words.length; i += 1){
-console.log(i)
-if (regex.test(words[i]) === false){
-capital(words);
-}
-return words.join(" ")
-}
-
-return words
-}
-
-function toWeirdCase(string){
-let arr = string.split(" ");
-let i = 0;
-let newArr = [];
-for (const letter of arr) {
-for (x = 0; x < letter.length; x += 1){
-if (x % 2 == 0) {
-newArr.push(letter[x].toUpperCase())
-} else {
-newArr.push(letter[x])
-}
-}
-i++
-}
-return newArr.join("");
-}
-
-// const regex = / /g;
-// for (i = 0; i < string.length; i += 1){
-// if (regex.test(string[i]) === false){
-// if (i % 2 == 0) {
-// string[i] = 'Å'
-// }
-// }
-// }
