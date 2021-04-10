@@ -152,3 +152,120 @@ function isPangram(string) {
   return abc.every(x => str.includes(x))
 }
 ```
+
+### Two fighters, one winner.
+
+Create a function that returns the name of the winner in a fight between two fighters.
+
+Each fighter takes turns attacking the other and whoever kills the other first is victorious. Death is defined as having health <= 0.
+
+Each fighter will be a Fighter object/instance. See the Fighter class below in your chosen language.
+
+Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
+
+#### Example
+
+```js
+function Fighter(name, health, damagePerAttack) {
+  this.name = name
+  this.health = health
+  this.damagePerAttack = damagePerAttack
+  this.toString = function() {
+    return this.name
+  }
+}
+```
+
+```js
+describe("Example Test Cases", function() {
+  Test.assertEquals(
+    declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"),
+    "Lew"
+  )
+
+  Test.assertEquals(
+    declareWinner(
+      new Fighter("Lew", 10, 2),
+      new Fighter("Harry", 5, 4),
+      "Harry"
+    ),
+    "Harry"
+  )
+
+  Test.assertEquals(
+    declareWinner(
+      new Fighter("Harald", 20, 5),
+      new Fighter("Harry", 5, 4),
+      "Harry"
+    ),
+    "Harald"
+  )
+
+  Test.assertEquals(
+    declareWinner(
+      new Fighter("Harald", 20, 5),
+      new Fighter("Harry", 5, 4),
+      "Harald"
+    ),
+    "Harald"
+  )
+
+  Test.assertEquals(
+    declareWinner(
+      new Fighter("Jerry", 30, 3),
+      new Fighter("Harald", 20, 5),
+      "Jerry"
+    ),
+    "Harald"
+  )
+
+  Test.assertEquals(
+    declareWinner(
+      new Fighter("Jerry", 30, 3),
+      new Fighter("Harald", 20, 5),
+      "Harald"
+    ),
+    "Harald"
+  )
+})
+```
+
+```js
+function declareWinner(fighter1, fighter2, firstAttacker) {
+  let winner = ""
+
+  while (fighter1.health > 0 || fighter2.health > 0) {
+    if (fighter1.name === firstAttacker) {
+      fighter2.health -= fighter1.damagePerAttack
+      firstAttacker = fighter2.name
+    } else if (fighter2.name === firstAttacker) {
+      fighter1.health -= fighter2.damagePerAttack
+      firstAttacker = fighter1.name
+    }
+    if (fighter1.health <= 0) {
+      return (winner = fighter2.name)
+    }
+
+    if (fighter2.health <= 0) {
+      return (winner = fighter1.name)
+    }
+  }
+  console.log(winner)
+  return winner
+}
+```
+
+### Roman Numerals Decoder
+
+Create a function that takes a Roman numeral as its argument and returns its value as a numeric decimal integer. You don't need to validate the form of the Roman numeral.
+
+Modern Roman numerals are written by expressing each decimal digit of the number to be encoded separately, starting with the leftmost digit and skipping any 0s. So 1990 is rendered "MCMXC" (1000 = M, 900 = CM, 90 = XC) and 2008 is rendered "MMVIII" (2000 = MM, 8 = VIII). The Roman numeral for 1666, "MDCLXVI", uses each letter in descending order.
+
+Symbol Value
+I 1
+V 5
+X 10
+L 50
+C 100
+D 500
+M 1,000
