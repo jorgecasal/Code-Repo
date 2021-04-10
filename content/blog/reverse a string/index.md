@@ -332,3 +332,31 @@ Move the first letter of each word to the end of it, then add "ay" to the end of
 
 > Test.assertEquals(pigIt('Pig latin is cool'),'igPay atinlay siay oolcay')
 > Test.assertEquals(pigIt('This is my string'),'hisTay siay ymay tringsay')
+
+```js
+function pigIt(str) {
+  str = str.split(" ")
+  str.map((word, index) => {
+    if (/[^a-zA-Z0-9]/.test(word)) {
+      return word
+    } else {
+      str[index] = str[index].substring(1) + str[index][0] + "ay"
+    }
+  })
+  return str.join(" ")
+}
+```
+
+```js
+function pigIt(str) {
+  return str.replace(/(\w)(\w*)(\s|$)/g, "$2$1ay$3")
+}
+```
+
+```js
+function pigIt(str) {
+  return str.replace(/\w+/g, w => {
+    return w.slice(1) + w[0] + "ay"
+  })
+}
+```
