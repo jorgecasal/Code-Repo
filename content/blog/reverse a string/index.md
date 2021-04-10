@@ -5,7 +5,11 @@ thumbnail: ./elizeu-dias-xarhNpLSHTk-unsplash.jpg
 description: .split() .reverse() .join()
 ---
 
+## Reverse a string
+
 Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string sredoC dna dlroW olleH.
+
+##### Solution
 
 ```js
 let str = "Hello"
@@ -29,7 +33,7 @@ function stringReverse(str) {
 stringReverse(str)
 ```
 
-### Longest Word
+## Longest Word
 
 Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sen will not be empty.
 
@@ -39,6 +43,8 @@ Have the function LongestWord(sen) take the sen parameter being passed and retur
 > Output: time
 > Input: "I love dogs"
 > Output: love
+
+##### Solution
 
 ```js
 function LongestWord(sen) {
@@ -54,7 +60,7 @@ function LongestWord(sen) {
 }
 ```
 
-### String ends with?
+## String ends with?
 
 Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
@@ -65,13 +71,15 @@ Complete the solution so that it returns true if the first argument(string) pass
 > Input: 'abc', 'd'
 > Output: false
 
+##### Solution
+
 ```js
 function solution(str, ending) {
   return str.endsWith(ending) ? true : false
 }
 ```
 
-### WeIrD StRiNg CaSe
+## WeIrD StRiNg CaSe
 
 Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and returns the same string with all even indexed characters in each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith index is even, therefore that character should be upper cased.
 
@@ -83,6 +91,8 @@ The passed in string will only consist of alphabetical characters and spaces(' '
 > Output: "StRiNg"
 > Input: "Weird string case"
 > Output: "WeIrD StRiNg CaSe"
+
+##### Solution
 
 ```js
 function toWeirdCase(string) {
@@ -103,7 +113,7 @@ function toWeirdCase(string) {
 }
 ```
 
-### Disemvowel Trolls
+## Disemvowel Trolls
 
 Trolls are attacking your comment section!
 
@@ -117,6 +127,8 @@ For example, the string "This website is for losers LOL!" would become "Ths wbst
 
 > Input: "This website is for losers LOL!"
 > Output: "Ths wbst s fr lsrs LL!"
+
+##### Solution
 
 ```js
 function disemvowel(str) {
@@ -132,7 +144,7 @@ function disemvowel(str) {
 }
 ```
 
-### Detect Pangram
+## Detect Pangram
 
 A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 
@@ -145,6 +157,8 @@ Given a string, detect whether or not it is a pangram. Return True if it is, Fal
 > Input: "This is not a pangram."
 > Output: false
 
+##### Solution
+
 ```js
 function isPangram(string) {
   let abc = "abcdefghijklmnopqrstuvwxyz".split("")
@@ -153,7 +167,7 @@ function isPangram(string) {
 }
 ```
 
-### Two fighters, one winner.
+## Two fighters, one winner.
 
 Create a function that returns the name of the winner in a fight between two fighters.
 
@@ -175,6 +189,8 @@ function Fighter(name, health, damagePerAttack) {
   }
 }
 ```
+
+#### Tests
 
 ```js
 describe("Example Test Cases", function() {
@@ -230,6 +246,8 @@ describe("Example Test Cases", function() {
 })
 ```
 
+##### Solution
+
 ```js
 function declareWinner(fighter1, fighter2, firstAttacker) {
   let winner = ""
@@ -255,7 +273,7 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
 }
 ```
 
-### Roman Numerals Decoder
+## Roman Numerals Decoder
 
 Create a function that takes a Roman numeral as its argument and returns its value as a numeric decimal integer. You don't need to validate the form of the Roman numeral.
 
@@ -274,6 +292,8 @@ M 1,000
 
 > Input: 'XXI'
 > Output: 21
+
+##### Solution
 
 ```js
 function solution(roman) {
@@ -294,6 +314,8 @@ function solution(roman) {
   return sum
 }
 ```
+
+##### Solution
 
 ```js
 function solution(roman) {
@@ -317,7 +339,7 @@ function solution(roman) {
 }
 ```
 
-### Simple Pig Latin
+## Simple Pig Latin
 
 Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
 
@@ -391,5 +413,28 @@ function count(string) {
     }
   }
   return obj
+}
+```
+
+##### Solution
+
+```js
+function count(string) {
+  var count = {}
+  string.split("").forEach(function(s) {
+    count[s] ? count[s]++ : (count[s] = 1)
+  })
+  return count
+}
+```
+
+##### Solution
+
+```js
+function count(string) {
+  return string.split("").reduce(function(counts, char) {
+    counts[char] = (counts[char] || 0) + 1
+    return counts
+  }, {})
 }
 ```
