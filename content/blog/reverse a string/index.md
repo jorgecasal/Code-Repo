@@ -333,6 +333,8 @@ Move the first letter of each word to the end of it, then add "ay" to the end of
 > Test.assertEquals(pigIt('Pig latin is cool'),'igPay atinlay siay oolcay')
 > Test.assertEquals(pigIt('This is my string'),'hisTay siay ymay tringsay')
 
+##### Solution
+
 ```js
 function pigIt(str) {
   str = str.split(" ")
@@ -347,11 +349,15 @@ function pigIt(str) {
 }
 ```
 
+##### Solution
+
 ```js
 function pigIt(str) {
   return str.replace(/(\w)(\w*)(\s|$)/g, "$2$1ay$3")
 }
 ```
+
+##### Solution
 
 ```js
 function pigIt(str) {
@@ -360,3 +366,9 @@ function pigIt(str) {
   })
 }
 ```
+
+### Count characters in your string
+
+The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+What if the string is empty? Then the result should be empty object literal, {}.
