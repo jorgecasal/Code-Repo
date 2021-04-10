@@ -294,3 +294,25 @@ function solution(roman) {
   return sum
 }
 ```
+
+```js
+function solution(roman) {
+  var value = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 }
+  return roman
+    .split("")
+    .map(d => value[d])
+    .reduce((s, v, i, o) => s + (o[i + 1] > v ? -v : v), 0)
+}
+
+function solution(roman) {
+  var rom = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 }
+  return roman
+    .split("")
+    .reverse()
+    .reduce(function(dec, c, i, rr) {
+      c = rom[c]
+      i = rom[rr[i - 1]] || 0
+      return dec + (i <= c ? c : -c)
+    }, 0)
+}
+```
