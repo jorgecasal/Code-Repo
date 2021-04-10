@@ -321,6 +321,13 @@ function solution(roman) {
 
 Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
 
+#### Examples
+
+> Input: 'Pig latin is cool'
+> Output: 'igPay atinlay siay oolcay'
+> Input: 'Hello world !'
+> Output: 'elloHay orldway !'
+
 #### Tests
 
 > Test.assertEquals(pigIt('Pig latin is cool'),'igPay atinlay siay oolcay')
