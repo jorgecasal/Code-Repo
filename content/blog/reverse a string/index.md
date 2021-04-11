@@ -467,3 +467,35 @@ describe("examples", function() {
   })
 })
 ```
+
+##### Solution
+
+```js
+function humanReadable(seconds) {
+  let hh = 0
+  let mm = 0
+  let ss = 0
+  for (let i = 0; seconds > i; i++) {
+    ss++
+    if (hh === 100) {
+      hh = 99
+      mm = 59
+      ss = 59
+    }
+    if (mm === 59 && ss === 60) {
+      hh += 1
+      mm = 0
+      ss = 0
+    }
+    if (ss === 60) {
+      mm += 1
+      ss = 0
+    }
+  }
+  let time = `${(hh < 10 ? "0" : "") + hh}:${(mm < 10 ? "0" : "") + mm}:${(ss <
+  10
+    ? "0"
+    : "") + ss}`
+  return time
+}
+```
