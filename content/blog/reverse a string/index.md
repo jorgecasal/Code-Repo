@@ -619,6 +619,8 @@ All the test strings would contain valid Morse code, so you may skip checking fo
 
 Good luck!
 
+#### Tests
+
 ```js
 describe("Example from description", function() {
   Test.assertEquals(decodeMorse(".... . -.--   .--- ..- -.. ."), "HEY JUDE")
@@ -628,6 +630,8 @@ describe("Your own tests", function() {
   Test.assertEquals(decodeMorse("···−−−···"), "SOS")
 })
 ```
+
+##### Solution
 
 ```js
 function decodeMorse(morseCode) {
@@ -651,5 +655,38 @@ function decodeMorse(morseCode) {
     decoded = decoded.substring(1)
   }
   return decoded
+}
+```
+
+##### Solution
+
+```js
+decodeMorse = function(morseCode) {
+  function decodeMorseLetter(letter) {
+    return MORSE_CODE[letter]
+  }
+  function decodeMorseWord(word) {
+    return word
+      .split(" ")
+      .map(decodeMorseLetter)
+      .join("")
+  }
+  return morseCode
+    .trim()
+    .split("   ")
+    .map(decodeMorseWord)
+    .join(" ")
+}
+```
+
+##### Solution
+
+```js
+decodeMorse = function(morseCode) {
+  return morseCode
+    .trim()
+    .split(/  | /)
+    .map(code => MORSE_CODE[code] || " ")
+    .join("")
 }
 ```
