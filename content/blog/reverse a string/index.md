@@ -630,7 +630,7 @@ describe("Your own tests", function() {
 ```
 
 ```js
-decodeMorse = function(morseCode) {
+function decodeMorse(morseCode) {
   morseCode = morseCode.split("   ")
   let arr = []
   let decoded = ""
