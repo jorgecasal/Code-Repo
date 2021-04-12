@@ -846,6 +846,8 @@ Test.assertEquals(six(dividedBy(two())), 3)
 Test.assertEquals(seven(plus(three())), 10)
 ```
 
+##### Solution
+
 ```js
 function zero(x) {
   if (typeof x === "string") {
@@ -1049,5 +1051,103 @@ function times(x) {
 }
 function dividedBy(x) {
   return `d${x}`
+}
+```
+
+##### Solution
+
+```js
+function zero(func) {
+  return func ? func(0) : 0
+}
+function one(func) {
+  return func ? func(1) : 1
+}
+function two(func) {
+  return func ? func(2) : 2
+}
+function three(func) {
+  return func ? func(3) : 3
+}
+function four(func) {
+  return func ? func(4) : 4
+}
+function five(func) {
+  return func ? func(5) : 5
+}
+function six(func) {
+  return func ? func(6) : 6
+}
+function seven(func) {
+  return func ? func(7) : 7
+}
+function eight(func) {
+  return func ? func(8) : 8
+}
+function nine(func) {
+  return func ? func(9) : 9
+}
+
+function plus(b) {
+  return function(a) {
+    return a + b
+  }
+}
+function minus(b) {
+  return function(a) {
+    return a - b
+  }
+}
+function times(b) {
+  return function(a) {
+    return a * b
+  }
+}
+function dividedBy(b) {
+  return function(a) {
+    return a / b
+  }
+}
+```
+
+##### Solution
+
+```js
+;[
+  "zero",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+].forEach(function(name, n) {
+  this[name] = function(f) {
+    return f ? f(n) : n
+  }
+})
+
+function plus(n) {
+  return function(a) {
+    return a + n
+  }
+}
+function minus(n) {
+  return function(a) {
+    return a - n
+  }
+}
+function times(n) {
+  return function(a) {
+    return a * n
+  }
+}
+function dividedBy(n) {
+  return function(a) {
+    return a / n
+  }
 }
 ```
