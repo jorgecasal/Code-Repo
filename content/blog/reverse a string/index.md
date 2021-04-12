@@ -782,3 +782,247 @@ function generateHashtag(str) {
   }
 }
 ```
+
+##### Solution
+
+```js
+function generateHashtag(str) {
+  return str.length > 140 || str === ""
+    ? false
+    : "#" +
+        str
+          .split(" ")
+          .map(capitalize)
+          .join("")
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+```
+
+##### Solution
+
+```js
+function generateHashtag(str) {
+  if (!str || str.length < 1) return false
+
+  var r =
+    "#" +
+    str
+      .split(" ")
+      .map(function(el) {
+        return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase()
+      })
+      .join("")
+  return r.length > 140 ? false : r
+}
+```
+
+## Calculating with Functions
+
+```js
+function zero(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 0 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 0 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 0 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(0 / parseInt(x[1]))
+    }
+  } else {
+    return 0
+  }
+}
+function one(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 1 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 1 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 1 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(1 / parseInt(x[1]))
+    }
+  } else {
+    return 1
+  }
+}
+function two(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 2 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 2 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 2 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(2 / parseInt(x[1]))
+    }
+  } else {
+    return 2
+  }
+}
+function three(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 3 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 3 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 3 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(3 / parseInt(x[1]))
+    }
+  } else {
+    return 3
+  }
+}
+function four(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 4 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 4 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 4 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(4 / parseInt(x[1]))
+    }
+  } else {
+    return 4
+  }
+}
+function five(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 5 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 5 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 5 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(5 / parseInt(x[1]))
+    }
+  } else {
+    return 5
+  }
+}
+function six(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 6 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 6 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 6 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(6 / parseInt(x[1]))
+    }
+  } else {
+    return 6
+  }
+}
+function seven(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 7 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 7 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 7 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(7 / parseInt(x[1]))
+    }
+  } else {
+    return 7
+  }
+}
+function eight(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 8 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 8 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 8 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(8 / parseInt(x[1]))
+    }
+  } else {
+    return 8
+  }
+}
+function nine(x) {
+  if (typeof x === "string") {
+    x = x.split("")
+    if (x[0] === "p") {
+      return 9 + parseInt(x[1])
+    }
+    if (x[0] === "m") {
+      return 9 - parseInt(x[1])
+    }
+    if (x[0] === "t") {
+      return 9 * parseInt(x[1])
+    }
+    if (x[0] === "d") {
+      return Math.floor(9 / parseInt(x[1]))
+    }
+  } else {
+    return 9
+  }
+}
+
+function plus(x) {
+  return `p${x}`
+}
+function minus(x) {
+  return `m${x}`
+}
+function times(x) {
+  return `t${x}`
+}
+function dividedBy(x) {
+  return `d${x}`
+}
+```
