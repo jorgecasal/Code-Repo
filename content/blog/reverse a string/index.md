@@ -1,8 +1,8 @@
 ---
-title: Reverse a string
+title: code challenges
 date: "2015-05-01T22:12:03.284Z"
 thumbnail: ./elizeu-dias-xarhNpLSHTk-unsplash.jpg
-description: .split() .reverse() .join()
+description: some code challenges
 ---
 
 ## Reverse a string
