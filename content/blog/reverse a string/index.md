@@ -703,13 +703,13 @@ Here's the deal:
 - If the final result is longer than 140 chars it must return false.
 - If the input or the result is an empty string it must return false.
 
-#### Examples
+### Examples
 
 > " Hello there thanks for trying my Kata" => "#HelloThereThanksForTryingMyKata"
 > " Hello World " => "#HelloWorld"
 > "" => false
 
-##### Tests
+#### Tests
 
 ```js
 Test.assertEquals(
@@ -761,7 +761,7 @@ Test.assertEquals(
 Test.assertEquals(generateHashtag("a".repeat(140)), false, "Too long")
 ```
 
-##### Solution
+##### Solution 1
 
 ```js
 function generateHashtag(str) {
@@ -783,7 +783,7 @@ function generateHashtag(str) {
 }
 ```
 
-##### Solution
+##### Solution 2
 
 ```js
 function generateHashtag(str) {
@@ -801,7 +801,7 @@ function capitalize(str) {
 }
 ```
 
-##### Solution
+##### Solution 3
 
 ```js
 function generateHashtag(str) {
@@ -846,7 +846,7 @@ Test.assertEquals(six(dividedBy(two())), 3)
 Test.assertEquals(seven(plus(three())), 10)
 ```
 
-##### Solution
+##### Solution 1
 
 ```js
 function zero(x) {
@@ -1054,7 +1054,7 @@ function dividedBy(x) {
 }
 ```
 
-##### Solution
+##### Solution 2
 
 ```js
 function zero(func) {
@@ -1110,7 +1110,7 @@ function dividedBy(b) {
 }
 ```
 
-##### Solution
+##### Solution 3
 
 ```js
 ;[
@@ -1172,7 +1172,7 @@ Test.assertEquals(validParentheses(")())"), false)
 Test.assertEquals(validParentheses("())("), false)
 ```
 
-##### Solution
+##### Solution 1
 
 ```js
 function validParentheses(parens) {
@@ -1193,7 +1193,7 @@ function validParentheses(parens) {
 }
 ```
 
-##### Solution
+##### Solution 2
 
 ```js
 function validParentheses(parens) {
@@ -1208,7 +1208,7 @@ function validParentheses(parens) {
 }
 ```
 
-##### Solution
+##### Solution 3
 
 ```js
 function validParentheses(parens) {
