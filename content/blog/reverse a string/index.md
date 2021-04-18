@@ -468,7 +468,7 @@ describe("examples", function() {
 })
 ```
 
-##### Solution
+##### Solution 1
 
 ```js
 function humanReadable(seconds) {
@@ -500,7 +500,7 @@ function humanReadable(seconds) {
 }
 ```
 
-##### Solution
+##### Solution 2
 
 ```js
 function humanReadable(seconds) {
@@ -517,7 +517,7 @@ function humanReadable(seconds) {
 }
 ```
 
-##### Solution
+##### Solution 3
 
 ```js
 function humanReadable(seconds) {
@@ -533,7 +533,7 @@ function humanReadable(seconds) {
 }
 ```
 
-### Does my number look big in this?
+## Does my number look big in this?
 
 A Narcissistic Number is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
 
@@ -582,7 +582,7 @@ function narcissistic(value) {
 }
 ```
 
-### Decode the Morse code
+## Decode the Morse code
 
 Part of Series 1/3
 This kata is part of a series on the Morse code. After you solve this kata, you may move to the next one.
@@ -631,7 +631,7 @@ describe("Your own tests", function() {
 })
 ```
 
-##### Solution
+##### Solution 1
 
 ```js
 function decodeMorse(morseCode) {
@@ -658,7 +658,7 @@ function decodeMorse(morseCode) {
 }
 ```
 
-##### Solution
+##### Solution 2
 
 ```js
 decodeMorse = function(morseCode) {
@@ -679,7 +679,7 @@ decodeMorse = function(morseCode) {
 }
 ```
 
-##### Solution
+##### Solution 3
 
 ```js
 decodeMorse = function(morseCode) {
@@ -691,7 +691,7 @@ decodeMorse = function(morseCode) {
 }
 ```
 
-### The Hashtag Generator
+## The Hashtag Generator
 
 The marketing team is spending way too much time typing in hashtags.
 Let's help them with our own Hashtag Generator!
