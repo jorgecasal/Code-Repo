@@ -37,7 +37,7 @@ stringReverse(str)
 
 Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sen will not be empty.
 
-#### Examples
+### Examples
 
 > Input: "fun&!! time"
 > Output: time
@@ -64,7 +64,7 @@ function LongestWord(sen) {
 
 Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
-#### Examples
+### Examples
 
 > Input: 'abc', 'bc'
 > Output: true
@@ -85,7 +85,7 @@ Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and retu
 
 The passed in string will only consist of alphabetical characters and spaces(' '). Spaces will only be present if there are multiple words. Words will be separated by a single space(' ').
 
-#### Examples
+### Examples
 
 > Input: "String"
 > Output: "StRiNg"
@@ -123,7 +123,7 @@ Your task is to write a function that takes a string and return a new string wit
 
 For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
-#### Example
+### Example
 
 > Input: "This website is for losers LOL!"
 > Output: "Ths wbst s fr lsrs LL!"
@@ -150,7 +150,7 @@ A pangram is a sentence that contains every single letter of the alphabet at lea
 
 Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
-#### Example
+### Example
 
 > Input: "The quick brown fox jumps over the lazy dog."
 > Output: true
@@ -177,7 +177,7 @@ Each fighter will be a Fighter object/instance. See the Fighter class below in y
 
 Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
 
-#### Example
+### Example
 
 ```js
 function Fighter(name, health, damagePerAttack) {
@@ -288,7 +288,7 @@ C 100
 D 500
 M 1,000
 
-#### Example
+### Example
 
 > Input: 'XXI'
 > Output: 21
@@ -343,7 +343,7 @@ function solution(roman) {
 
 Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
 
-#### Examples
+### Examples
 
 > Input: 'Pig latin is cool'
 > Output: 'igPay atinlay siay oolcay'
@@ -355,7 +355,7 @@ Move the first letter of each word to the end of it, then add "ay" to the end of
 > Test.assertEquals(pigIt('Pig latin is cool'),'igPay atinlay siay oolcay')
 > Test.assertEquals(pigIt('This is my string'),'hisTay siay ymay tringsay')
 
-##### Solution
+##### Solution 1
 
 ```js
 function pigIt(str) {
@@ -371,7 +371,7 @@ function pigIt(str) {
 }
 ```
 
-##### Solution
+##### Solution 2
 
 ```js
 function pigIt(str) {
@@ -379,7 +379,7 @@ function pigIt(str) {
 }
 ```
 
-##### Solution
+##### Solution 3
 
 ```js
 function pigIt(str) {
@@ -400,7 +400,7 @@ What if the string is empty? Then the result should be empty object literal, {}.
 > Test.assertDeepEquals(count("aba"), { a: 2, b: 1 });
 > Test.assertDeepEquals(count(""), {});
 
-##### Solution
+##### Solution 1
 
 ```js
 function count(string) {
@@ -416,7 +416,7 @@ function count(string) {
 }
 ```
 
-##### Solution
+##### Solution 2
 
 ```js
 function count(string) {
@@ -428,7 +428,7 @@ function count(string) {
 }
 ```
 
-##### Solution
+##### Solution 3
 
 ```js
 function count(string) {
@@ -439,7 +439,7 @@ function count(string) {
 }
 ```
 
-### Human Readable Time
+## Human Readable Time
 
 Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
 
