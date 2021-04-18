@@ -1197,8 +1197,8 @@ function validParentheses(parens) {
 
 ```js
 function validParentheses(parens) {
-  var n = 0
-  for (var i = 0; i < parens.length; i++) {
+  let n = 0
+  for (let i = 0; i < parens.length; i++) {
     if (parens[i] == "(") n++
     if (parens[i] == ")") n--
     if (n < 0) return false
@@ -1212,9 +1212,9 @@ function validParentheses(parens) {
 
 ```js
 function validParentheses(parens) {
-  var indent = 0
+  let indent = 0
 
-  for (var i = 0; i < parens.length && indent >= 0; i++) {
+  for (let i = 0; i < parens.length && indent >= 0; i++) {
     indent += parens[i] == "(" ? 1 : -1
   }
 
