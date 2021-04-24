@@ -1237,10 +1237,28 @@ Test.assertEquals(solution('abcde', 'cde'), true)
 Test.assertEquals(solution('abcde', 'abc'), false)
 ```
 
-##### Solution
+##### Solution 1
 
 ```js
 function solution(str, ending){
   return str.endsWith(ending) ? true : false
+}
+```
+##### Solution 2
+
+```js
+function solution(str, ending){
+  return new RegExp(ending+"$", "i").test(str);
+}
+```
+##### Solution 3
+
+```js
+function solution(str, ending){
+  if (typeof(str) != "string" || typeof(ending) != "string")
+    throw "wrong type";
+  if (ending.length>str.length)
+    return false;
+  return str.substr(str.length-ending.length, ending.length) == ending;
 }
 ```
