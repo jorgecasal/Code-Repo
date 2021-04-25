@@ -1383,3 +1383,22 @@ function likes(names) {
   })
 }
 ```
+
+function upArray(arr){
+if(arr.every(elem => elem >= 0)){
+arr = arr.join('')
+let total = parseInt(arr) +1;
+console.log(total)
+let result = total.toString()
+result = result.split('')
+for (let i = 0; i < result.length; i++){
+result[i] = parseInt(result[i])
+if(result[i] < 0){
+result = null
+}
+}
+return result
+} else {
+return null
+}
+}
