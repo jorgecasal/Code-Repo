@@ -1221,44 +1221,132 @@ function validParentheses(parens) {
   return indent == 0
 }
 ```
+
 ## String ends with?
 
 Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
 ### Examples
 
->solution('abc', 'bc') // returns true
->solution('abc', 'd') // returns false
+> solution('abc', 'bc') // returns true
+> solution('abc', 'd') // returns false
 
 #### Tests
 
 ```js
-Test.assertEquals(solution('abcde', 'cde'), true)
-Test.assertEquals(solution('abcde', 'abc'), false)
+Test.assertEquals(solution("abcde", "cde"), true)
+Test.assertEquals(solution("abcde", "abc"), false)
 ```
 
 ##### Solution 1
 
 ```js
-function solution(str, ending){
+function solution(str, ending) {
   return str.endsWith(ending) ? true : false
 }
 ```
+
 ##### Solution 2
 
 ```js
-function solution(str, ending){
-  return new RegExp(ending+"$", "i").test(str);
+function solution(str, ending) {
+  return new RegExp(ending + "$", "i").test(str)
 }
 ```
+
 ##### Solution 3
 
 ```js
-function solution(str, ending){
-  if (typeof(str) != "string" || typeof(ending) != "string")
-    throw "wrong type";
-  if (ending.length>str.length)
-    return false;
-  return str.substr(str.length-ending.length, ending.length) == ending;
+function solution(str, ending) {
+  if (typeof str != "string" || typeof ending != "string") throw "wrong type"
+  if (ending.length > str.length) return false
+  return str.substr(str.length - ending.length, ending.length) == ending
+}
+```
+
+## Who likes it?
+
+You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
+
+### Examples
+
+> likes [] -- must be "no one likes this"
+> likes ["Peter"] -- must be "Peter likes this"
+> likes ["Jacob", "Alex"] -- must be "Jacob and Alex like this"
+> likes ["Max", "John", "Mark"] -- must be "Max, John and Mark like this"
+> likes ["Alex", "Jacob", "Mark", "Max"] -- must be "Alex, Jacob and 2 others like this"
+
+#### Tests
+
+```js
+describe("example tests", function() {
+  it("should return correct text", function() {
+    Test.assertEquals(likes([]), "no one likes this")
+    Test.assertEquals(likes(["Peter"]), "Peter likes this")
+    Test.assertEquals(likes(["Jacob", "Alex"]), "Jacob and Alex like this")
+    Test.assertEquals(
+      likes(["Max", "John", "Mark"]),
+      "Max, John and Mark like this"
+    )
+    Test.assertEquals(
+      likes(["Alex", "Jacob", "Mark", "Max"]),
+      "Alex, Jacob and 2 others like this"
+    )
+  })
+})
+```
+
+##### Solution 1
+
+```js
+function likes(names) {
+  if (names.length === 0) {
+    return "no one likes this"
+  }
+  if (names.length === 1) {
+    return `${names[0]} likes this`
+  }
+  if (names.length === 2) {
+    return `${names[0]} and ${names[1]} like this`
+  }
+  if (names.length === 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  }
+  if (names.length > 3) {
+    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+  }
+}
+```
+
+##### Solution 2
+
+```js
+function likes(names) {
+  names = names || []
+  switch (names.length) {
+    case 0:
+      return "no one likes this"
+      break
+    case 1:
+      return names[0] + " likes this"
+      break
+    case 2:
+      return names[0] + " and " + names[1] + " like this"
+      break
+    case 3:
+      return names[0] + ", " + names[1] + " and " + names[2] + " like this"
+      break
+    default:
+      return (
+        names[0] +
+        ", " +
+        names[1] +
+        " and " +
+        (names.length - 2) +
+        " others like this"
+      )
+  }
 }
 ```
