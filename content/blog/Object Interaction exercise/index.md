@@ -176,3 +176,111 @@ class Book {
 }
 ```
 The patron and dueDate properties are set to null because when a new Book object is instantiated, it has not been checked out by a Patron and thus is has no due date set. Similarly, the out property is set to false.
+
+## Solution: checkOut() and returnBook() Methods
+
+Solution for the checkOut() Method
+The checkOut() method in the Patron class is how we’re modeling the process of a real-life Library patron checking out a book.
+
+It sets the currentBook property on the Patron object to the Book object they’re checking out. It also sets the patron property on the Book object to the Patron that’s borrowing the book.
+
+The out property on the Book object is set to true and its due date is calculated and set.
+
+```js
+checkOut(book){
+        this.currentBook = book;
+        book.out = true;
+        book.patron = this;
+
+        const newDueDate = new Date();
+        newDueDate.setDate(newDueDate.getDate() + 14);
+        book.dueDate = newDueDate;
+}
+```
+Solution for the returnBook() method
+The returnBook() method does the opposite of the checkOut() method. Just like in real life, it undoes the check out process. Here’s the code the returnBook() method:
+
+```js
+returnBook(book) {
+        this.currentBook = null;
+        book.out = false;
+        book.patron = null;
+        book.dueDate = null;
+}
+```
+
+## Solution: A Better Way With Setter Methods
+
+The setter method, called out(), should receive one argument (this can also be called out, or any other variable name that makes sense to you). This argument is the value that the _out backing property will be set to - true or false. The Book object either is, or isn’t checked out.
+
+This setter method is also meant to calculate the Book’s due date. If the book is marked out, the due date should be calculated as two weeks from today. If the book is marked in, the due date should be set back to null.
+
+Calculating the due date is done using the JavaScript Date object. The Date object, like any other object, needs to be instantiated:
+
+```js
+ const newDueDate = new Date();
+```
+
+Each new Date object is automatically initialized to the current time and date. Then we can use the setDate() method (available on all Date objects) to change the due date to two weeks from today.
+
+To do this, we need to get the day value (for example 5, if it's November 5, 2018) from the Date object, and then add 14 to it. The getDate() method will return that day value. This all looks like this:
+
+```js
+newDueDate.setDate(newDueDate.getDate() + 14);
+```
+Once we’ve done that, we can update the dueDate property so that the completed setter method looks like this:
+
+```js
+set out(out){
+        this._out = out;
+
+        if (out) {
+            const newDueDate = new Date();
+            newDueDate.setDate(newDueDate.getDate() + 14);
+            this.dueDate = newDueDate;
+        } else {
+            this.dueDate = null;
+        }
+}
+```
+#### Solution for the Getter Method
+
+Since the setter method sets the _out property, we need a getter method to return the value of the _out property. It’s true that this property could be accessed directly by using this._out, but that’s not good practice. Because we’ll be setting it using out we should be accessing it the same way.
+
+```js
+get out() {
+        return this._out;
+}
+```
+
+#### Solution: Refactored checkOut() and returnBook() Methods
+
+The checkOut() and returnBook() methods on the Patron class are a lot simpler now:
+
+```js
+checkOut(book){
+    this.currentBook = book;
+    book.out = true;
+    book.patron = this;
+}
+```
+```js
+returnBook(book) {
+    this.currentBook = null;
+    book.out = false;
+    book.patron = null;
+}
+```
+
+#### Solution: Refactored Constructor Method on Book Class
+
+```js
+constructor(title, author, isbn) {
+    this.title = title;
+    this.author = author;
+    this.isbn = isbn;
+    this.patron = null;
+    this.dueDate = null;
+    this._out = false;
+}
+```
