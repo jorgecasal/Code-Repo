@@ -141,3 +141,38 @@ addPatron(patron) {
     this.patrons.push(patron);
 }
 ```
+## instruction: Checking Out and Returning Books
+
+1) Inside the Book class, add three properties to the constructor method: out, dueDate, and patron.
+
+- The out property should be initialized to false
+- The dueDate property should be initialized to null
+- The patron property should be initialized to null
+
+### Updating our Plan of Attack
+
+Sometimes, as we go through coding a project, our initial plan gets changed. Sometimes you might discover new things to be implemented or new ideas to incorporate. Sometimes you realize things you had included in the initial plan don’t make sense anymore, or that the way you built something wasn’t the best way to build it.
+
+That’s totally normal, and it’s just part of the iterative process of coding something.
+
+In this case, we realized that we needed to add some new properties to the Book class: patron, dueDate, and out. These properties can all be added to the constructor method.
+
+The patron property, represents the Patron that currently has the book checked out, if there is one. It’s initially set to null but can be set to the Patron object that’s checked out the book. This will probably happen in the checkOut() method we’ll add to the Patron class.
+
+The out property represents whether or not a Book object is checked out - it’s set to a boolean value (true or false). We’ll include it in the constructor method so that all Book objects have an initial out value of false. This value will also get updated in the checkOut() method.
+
+## Solution: New Properties to the Book Class
+
+```js
+class Book {
+    constructor(title, author, isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.patron = null;
+        this.dueDate = null;
+        this.out = false;
+    }
+}
+```
+The patron and dueDate properties are set to null because when a new Book object is instantiated, it has not been checked out by a Patron and thus is has no due date set. Similarly, the out property is set to false.
