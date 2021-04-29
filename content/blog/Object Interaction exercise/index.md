@@ -101,3 +101,43 @@ class Patron {
     }
 }
 ```
+
+## instruction: Adding Methods to the Library Class
+
+Now that we have some basic objects to play with, let's flesh them out by adding some methods. We'll start with methods to add books and patrons to the Library objects.
+
+Your instructions are as follows:
+
+1) In the Library.js file, add two methods to the Library class: addPatron() and addBook()
+
+- addPatron() receives one argument, a Patron object. This object (stored in the patron variable) should be added to the Library object's (stored in thelibrary variable) patrons property, which is an array.
+
+- addBook() receives one argument, a Book object. This object (stored in the book variable) should be added to the Library object's books property, which is an array.
+
+## Solution: Adding Methods to the Library Class
+
+#### The addBook() Method
+The addBook() method is a method we need to add to the Library class. Adding it to the Library class means that it will be available on any Library objects that are created.
+
+The addBook() method is our way of entering a new book into the library’s system. It should receive one argument - the actual Book object that’s being added.
+
+When the method is called on the Library object, the method should take the Book object that's passed in and push it onto the Library object’s books property, which, if you recall, was initialized as an empty array.
+
+```js
+addBook(book) {
+    this.books.push(book)
+}
+```
+So You Know...
+push() is an array method - that means you can call it on any array. It receives one argument - an element, or array of elements, that should be added to the end of the array that the push() method is called on.
+
+You can see the documentation for the push() method here. Keep this one in your arsenal - it’s a very handy method!
+
+#### The addPatron() Method
+The addPatron() method on the Library class works identically to the addBook() method.
+
+```js
+addPatron(patron) {
+    this.patrons.push(patron);
+}
+```
