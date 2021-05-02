@@ -284,3 +284,62 @@ constructor(title, author, isbn) {
     this._out = false;
 }
 ```
+
+## Solution: Charging Fines to Patrons
+
+With our initial plan of attack evolving even further, we needed to add a new property to the Library class constructor method called dailyFine. This property holds a numerical value that represents the amount of money, in dollars, to be charged to each Patron for every day their checked out book is overdue. $0.10 was the value chosen for the daily fine.
+
+The reason for storing this value in a property rather than hard-coding it is so that we can readily access this value and update it only in one place.
+
+```js
+ constructor() {
+    this.books = [];
+    this.patrons = [];
+    this.dailyFine = .1;
+ }
+ ```
+
+## Solution for Patron Class Constructor Method
+
+Likewise, we also needed to add a property to the Patron class called balance. This property holds the Patron’s fine balance, and is initialized to 0, since new Patron’s haven’t yet incurred any fines.
+
+```js
+constructor(name, email) {
+    this.name = name;
+    this.email = email;
+    this.currentBook = null;
+    this.balance = 0;
+}
+```
+Solution for the chargeFines() Method
+Adding the chargeFines() method to the Library class was the final step in building our Library system. A library employee could use this method to search the system for all patrons who have overdue books, and charge them a fine for every day their book is overdue.
+
+To write this method, we had to identify who the late Patrons were. My solution uses the array method filter(), though, there are other ways to do this.
+
+The filter() method is called on an array and returns a new array composed of any element in the original array that meet a given condition.
+
+The condition, in our case, is patrons who both have a checked out book and whose book is overdue.
+
+To figure out if a book was overdue, we needed to use the Date class again.
+
+```js
+const now = new Date();
+
+const latePatrons = this.patrons.filter(patron => 
+    (patron.currentBook !== null && patron.currentBook.dueDate < now)
+);
+```
+
+In that code sample, we’re creating a new variable called latePatrons. latePatrons is assigned to what’s returned from the filter() method when it’s called on the Library’s array of patron objects.
+
+The condition, patron.currentBook !== null && patron.currentBook.dueDate < now is checking to make sure that the patron’s currentBook property is not null, and that the checked out book’s due date is less than today, indicating the book is late.
+
+Once we have our filtered array, we can use a for...of loop to charge a fine to each patron by increasing the value of their balance property by the dailyFine amount times the number of days the book is late:
+
+```js
+for (let patron of latePatrons) {
+    const dateDiff = new Date(now - patron.currentBook.dueDate);
+    const daysLate = dateDiff.getDate();
+    patron.balance += this.dailyFine * daysLate;
+}
+```
