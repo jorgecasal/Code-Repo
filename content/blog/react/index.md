@@ -1,5 +1,5 @@
 ---
-title: What is a script
+title: What is React
 date: "2021-03-02T22:12:03.284Z"
 thumbnail: ./react.jpg
 description: and how to create one?
@@ -80,6 +80,7 @@ Because the function consists of only a single expression we have used a shortha
 
 const App = () => {
 return (
+
 <div>
 <p>Hello world</p>
 </div>
@@ -92,6 +93,7 @@ The function defining the component may contain any kind of JavaScript code. Mod
 const App = () => {
 console.log('Hello from component')
 return (
+
 <div>
 <p>Hello world</p>
 </div>
@@ -107,6 +109,7 @@ const a = 10
 const b = 20
 
 return (
+
 <div>
 <p>Hello world, it is {now.toString()}</p>
 <p>
@@ -154,6 +157,7 @@ Let's modify the file App.js as follows (NB: import at the top of the file and e
 
 const Hello = () => {
 return (
+
 <div>
 <p>Hello world</p>
 </div>
@@ -162,6 +166,7 @@ return (
 
 const App = () => {
 return (
+
 <div>
 <h1>Greetings</h1>
 <Hello />
@@ -174,6 +179,7 @@ We have defined a new component Hello and used it inside the component App. Natu
 
 const App = () => {
 return (
+
 <div>
 <h1>Greetings</h1>
 <Hello />
@@ -193,6 +199,7 @@ Let's modify the component Hello as follows
 
 const Hello = (props) => {
 return (
+
 <div>
 <p>Hello {props.name}</p>
 </div>
@@ -204,6 +211,7 @@ The props are defined as follows:
 
 const App = () => {
 return (
+
 <div>
 <h1>Greetings</h1>
 <Hello name="George" />
@@ -217,6 +225,7 @@ Let's modify the code so that the component Hello uses two props:
 
 const Hello = (props) => {
 return (
+
 <div>
 <p>
 Hello {props.name}, you are {props.age} years old
@@ -230,6 +239,7 @@ const name = 'Peter'
 const age = 10
 
 return (
+
 <div>
 <h1>Greetings</h1>
 <Hello name="Maya" age={26 + 10} />
@@ -251,6 +261,7 @@ Also keep in mind that React component names must be capitalized. If you try def
 
 const footer = () => {
 return (
+
 <div>
 greeting app created by <a href="https://github.com/mluukkai">mluukkai</a>
 </div>
@@ -260,6 +271,7 @@ and use it like this
 
 const App = () => {
 return (
+
 <div>
 <h1>Greetings</h1>
 <Hello name="Maya" age={26 + 10} />
@@ -273,6 +285,7 @@ Note that the content of a React component (usually) needs to contain one root e
 
 const App = () => {
 return (
+
 <h1>Greetings</h1>
 <Hello name="Maya" age={26 + 10} />
 <Footer />
@@ -285,6 +298,7 @@ Using a root element is not the only working option. An array of components is a
 
 const App = () => {
 return [
+
 <h1>Greetings</h1>,
 <Hello name="Maya" age={26 + 10} />,
 <Footer />
@@ -300,6 +314,7 @@ const age = 10
 
 return (
 <>
+
 <h1>Greetings</h1>
 <Hello name="Maya" age={26 + 10} />
 <Hello name={name} age={age} />
