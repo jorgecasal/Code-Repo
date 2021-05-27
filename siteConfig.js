@@ -1,9 +1,9 @@
 module.exports = {
-  name: "CODE REPO",
+  name: "TypeScript REPO",
   shortName: "BLOG",
-  description: "A bold, minimal JavaScript blog",
-  url: "https://code-repo.netlify.app/",
+  description: "A bold, minimal TypeScript tutorial",
+  url: "https://TypeScript-repo.netlify.app/",
   prefix: "/",
   author: "JORGE CASAL",
-  twitter: "joorgecasal",
+  twitter: "jorgecasal",
 }
