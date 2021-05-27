@@ -1,5 +1,5 @@
 ---
-title: Variables
+title: Step one
 date: "2021-05-27"
 thumbnail: ./egg4.jpg
 description: Let's get started
