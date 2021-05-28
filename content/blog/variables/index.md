@@ -38,12 +38,12 @@ Because JavaScript can hold any values, our variable can hold any types at any t
 
 There are 7 different types in JavaScript as defined by [ECMA](https://www.ecma-international.org/) those are:
 
-> Number
-> String
-> Boolean
-> Undefined
-> Null
-> Object
-> Symbol
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+- Object
+- Symbol
 
 They are all incredibly common and we use them all the time without even thinking about them as types, but if we use them incorrectly, we can get an unexpected behavior. That is why a tool such as TypeScript embraces the good stuff of JavaScript making it super powerful.
