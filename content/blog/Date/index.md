@@ -23,7 +23,14 @@ console.log(formatDate("12/31/2014"))
 
 ```js
 function formatDate(userDate) {
-  // format from M/D/YYYY to YYYYMMDD
+  userDate = userDate.split("/")
+  if (userDate[0].length < 2) {
+    userDate[0] = "0" + userDate[0]
+  }
+  if (userDate[1].length < 2) {
+    userDate[1] = "0" + userDate[1]
+  }
+  return userDate[2] + userDate[0] + userDate[1]
 }
 
 console.log(formatDate("12/31/2014"))
