@@ -9,7 +9,7 @@ Arrow functions and functions defined using the function keyword vary substantia
 
 We can assign methods to an object by defining properties that are functions:
 
-const arto = {
+const ato = {
 name: 'Arto Hellas',
 age: 35,
 education: 'PhD',
