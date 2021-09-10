@@ -1,49 +1,32 @@
 ---
-title: Step one
-date: "2021-05-27"
+title: Variables
+date: "2021-10-10"
 thumbnail: ./egg4.jpg
-description: Let's get started
+description: What is a variable, let, const, and var?
 ---
 
-We are not going to start with "What is TypeScript?" because if you are here you already know what you are getting yourself into. However, we are going to start by taking a look at types in JavaScript.
-Because let's be honest here, we don't think that much about types when using JavaScript, right?
-but we are dealing with types all the time, so lets jump in and prove it.
-
-If we run undefined as a function, we will see that undefined is not a function, and have get thrown a run time TypeError, so if JavaScript didn't have types, we wouldn't be able to get a TypeError
+In JavaScript there are a few ways to go about defining variables:
 
 ```js
-> undefined()
-Uncaught TypeError: undefined is not a function
+const x = 1
+
+let y = 5
+
+console.log(x, y) // 1, 5 are printed to the console
+
+y += 10
+
+console.log(x, y) // 1, 15 are printed to the console
+
+y = "aString"
+
+console.log(x, y) // 1, aString are printed to the console
+
+x = 4 // causes an error
 ```
 
-If we type in a number, it is always a number.
+const does not actually define a variable but a constant for which the value can no longer be changed. On the other hand let defines a normal variable previously known as var.
 
-```js
-> 8
-8
-```
+In the example above, we also see that the type of the data assigned to the variable can change during execution. At the start y stores an integer and at the end a string.
 
-Now, we might later on declare variables in our program that hold that number, but it doesn't always have to hold that number, we can at any time point that to a string instead, and that is a perfectly normal JavaScript thing.
-
-```js
-> let num = 8
-undefined
-> num
-8
-> num = '8'
-'8'
-```
-
-Because JavaScript can hold any values, our variable can hold any types at any time, it's the nature of a dynamically typed language.
-
-There are 7 different types in JavaScript as defined by [ECMA](https://www.ecma-international.org/) those are:
-
-- Number
-- String
-- Boolean
-- Undefined
-- Null
-- Object
-- Symbol
-
-They are all incredibly common and we use them all the time without even thinking about them as types, but if we use them incorrectly, we can get an unexpected behavior. That is why a tool such as TypeScript embraces the good stuff of JavaScript making it super powerful.
+It is also possible to define variables in JavaScript using the keyword var. var was, for a long time, the only way to define variables. const and let were only recently added in version ES6. In specific situations, var works in a different way compared to variable definitions in most languages. During this course the use of var is ill-advised and you should stick with using const and let!
