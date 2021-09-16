@@ -1,5 +1,5 @@
 ---
-title: Check Digit
+title: (JS) Check Digit
 date: "2021-10-10"
 thumbnail: ./egg4.jpg
 description: (easy)
@@ -38,3 +38,7 @@ function formatDate(userDate) {
 
 console.log(formatDate("12/31/2014"))
 ```
+
+#link
+
+[TESTDOME](https://www.testdome.com/questions/javascript/check-digit/30696?visibility=3&skillId=2&orderBy=Difficulty)
