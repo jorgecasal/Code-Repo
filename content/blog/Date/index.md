@@ -35,3 +35,7 @@ function formatDate(userDate) {
 
 console.log(formatDate("12/31/2014"))
 ```
+
+#link
+
+> https://www.testdome.com/questions/javascript/date/8521?visibility=3&skillId=2&orderBy=Difficulty
