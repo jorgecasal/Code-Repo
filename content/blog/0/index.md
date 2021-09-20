@@ -1,23 +1,40 @@
 ---
-title: React Toggle
+title: (JS) Remove Property
 date: "2021-05-01T22:12:03.284Z"
 thumbnail: ./eirik-uhlen-LsPVs1ho8qw-unsplash.jpg
-description: useState toggle?
+description: (easy)
 ---
 
+Implement the removeProperty function which takes an object and property name, and does the following:
+
+If the object obj has a property prop, the function removes the property from the object and returns true; in all other cases it returns false.
+
+#Starting code
+
 ```js
-import React, { useState } from "react"
-import ReactDOM from "react-dom"
+function removeProperty(obj, prop) {
+  return null
+}
+```
 
-function Toggle() {
-  const [toggle, setToggle] = useState("ON")
+#Solution
 
-  const leFunc = () => {
-    toggle === "ON" ? setToggle("OFF") : setToggle("ON")
+```js
+function ensure(value) {
+  if (value === undefined) {
+    throw new Error("argument undefined")
+  } else {
+    return value
   }
-
-  return <button onClick={leFunc}>{toggle}</button>
 }
 
-ReactDOM.render(<Toggle />, document.getElementById("root"))
+try {
+  console.log(ensure())
+} catch (err) {
+  console.log(err)
+}
 ```
+
+#link
+
+[TESTDOME](https://www.testdome.com/questions/javascript/remove-property/35859?visibility=1&skillId=2&orderBy=Difficulty)
