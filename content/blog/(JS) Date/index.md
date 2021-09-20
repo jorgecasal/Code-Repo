@@ -1,6 +1,6 @@
 ---
 title: (JS) Date
-date: "2015-05-01T22:12:03.284Z"
+date: "2020-05-01T22:12:03.284Z"
 thumbnail: ./egg2.jpg
 description: (easy)
 ---

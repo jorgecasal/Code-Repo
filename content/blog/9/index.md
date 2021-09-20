@@ -1,6 +1,6 @@
 ---
 title: React Counter
-date: "2015-05-01T22:12:03.284Z"
+date: "2021-05-01T22:12:03.284Z"
 thumbnail: ./arno-smit-qY_yTu7YBT4-unsplash.jpg
 description: useState counter?
 ---

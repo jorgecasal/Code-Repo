@@ -1,6 +1,6 @@
 ---
 title: React Toggle
-date: "2015-05-01T22:12:03.284Z"
+date: "2021-05-01T22:12:03.284Z"
 thumbnail: ./eirik-uhlen-LsPVs1ho8qw-unsplash.jpg
 description: useState toggle?
 ---

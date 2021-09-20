@@ -1,6 +1,6 @@
 ---
 title: Classes
-date: "2015-05-01T22:12:03.284Z"
+date: "2021-05-01T22:12:03.284Z"
 thumbnail: ./egg6.jpg
 description: What is a class?
 ---

@@ -1,6 +1,6 @@
 ---
 title: (JS) Check Digit
-date: "2021-10-10"
+date: "2020-10-10"
 thumbnail: ./egg4.jpg
 description: (easy)
 ---

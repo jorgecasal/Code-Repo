@@ -1,6 +1,6 @@
 ---
 title: functions
-date: "2015-05-01T22:12:03.284Z"
+date: "2021-05-01T22:12:03.284Z"
 thumbnail: ./egg3.jpg
 ---
 
