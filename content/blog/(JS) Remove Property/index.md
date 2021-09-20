@@ -20,18 +20,13 @@ function removeProperty(obj, prop) {
 #Solution
 
 ```js
-function ensure(value) {
-  if (value === undefined) {
-    throw new Error("argument undefined")
+function removeProperty(obj, prop) {
+  if (prop in obj) {
+    delete obj[prop]
+    return true
   } else {
-    return value
+    return false
   }
-}
-
-try {
-  console.log(ensure())
-} catch (err) {
-  console.log(err)
 }
 ```
 
