@@ -25,18 +25,21 @@ console.log(createCheckDigit("55555"))
 #Solution
 
 ```js
-function formatDate(userDate) {
-  userDate = userDate.split("/")
-  if (userDate[0].length < 2) {
-    userDate[0] = "0" + userDate[0]
-  }
-  if (userDate[1].length < 2) {
-    userDate[1] = "0" + userDate[1]
-  }
-  return userDate[2] + userDate[0] + userDate[1]
+function createCheckDigit(membershipId) {
+  let sumMembershipId = aggregator(membershipId)
+  while (parseInt(sumMembershipId) > 9)
+    sumMembershipId = aggregator(sumMembershipId)
+  return sumMembershipId
 }
 
-console.log(formatDate("12/31/2014"))
+function aggregator(strMembershipId) {
+  return strMembershipId
+    .toString()
+    .split("")
+    .reduce((a, b) => parseInt(a) + parseInt(b), 0)
+}
+
+console.log(createCheckDigit("55555"))
 ```
 
 #link
