@@ -1,7 +1,7 @@
 ---
 title: (JS) Date
 date: "2020-05-01T22:12:03.284Z"
-thumbnail: ./egg2.jpg
+thumbnail: ./post2.gif
 description: (easy)
 ---
 
