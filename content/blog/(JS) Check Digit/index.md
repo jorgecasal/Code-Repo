@@ -1,7 +1,7 @@
 ---
 title: (JS) Check Digit
 date: "2020-10-10"
-thumbnail: ./post.gif
+thumbnail: ./egg2.jpg
 description: (easy)
 ---
 
